@@ -24,8 +24,6 @@
       "eslint"
     ]
   },
-  "eslintConfig": {
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,11 +37,11 @@
     ]
   },
   "devDependencies": {
-    "husky": "^6.0.0",
+    "husky": "4.2",
     "lint-staged": "^10.5.4",
     "redux-devtools-extension": "^2.13.9"
   },
-    "dependencies": {
+  "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
