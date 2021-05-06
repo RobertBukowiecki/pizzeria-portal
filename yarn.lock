@@ -3280,7 +3280,7 @@ cheerio-select@^1.4.0:
     domhandler "^4.2.0"
     domutils "^2.6.0"
 
-cheerio@^1.0.0-rc.3:
+cheerio@^1.0.0-rc.3, cheerio@^1.0.0-rc.7:
   version "1.0.0-rc.7"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.7.tgz#392dec11e03da30c495149081de1a8b8e669bea1"
   integrity sha512-LiS5ueTHfMKDpcCEJYsMIQmokQj/7McI9cvIsX7Spn7339oqA7dksNug1ceo8UTZUQovEjbNsNZ/OOdoq0wfpQ==
