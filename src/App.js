@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import BookingInfo from './components/views/BookingInfo/BookingInfo';
 import BookingNew from './components/views/BookingNew/BookingNew';
@@ -9,7 +10,6 @@ import OrderInfo from './components/views/OrderInfo/OrderInfo';
 import OrderNew from './components/views/OrderNew/OrderNew';
 import Kitchen from './components/views/Kitchen/Kitchen';
 import Waiter from './components/views/Waiter/Waiter';
-
 import Homepage from './components/views/Homepage/Homepage';
 import Login from './components/views/Login/Login';
 import Tables from './components/views/Tables/Tables';
