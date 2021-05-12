@@ -82,12 +82,11 @@ const renderActions = (status, id) => {
 };
 
 const Tables = () => {
-  const selectedDate = new Date();
   return (
     <div className={styles.component}>
       <div className={styles.wrapper}>
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <DatePicker value={selectedDate} onChange={null}/>
+          <DatePicker/>
         </MuiPickersUtilsProvider>
       </div>
       <Paper>

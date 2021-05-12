@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './BookingNew.module.scss';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';

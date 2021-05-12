@@ -27,7 +27,7 @@ const Kitchen = () => {
       <Grid container spacing={3}>
         {filtered.map(card => (
           <Grid key={card.id} item lg={4} xs={6}>
-            <Paper className={styles.paper}>
+            <Paper elevation={5} className={styles.paper}>
               <Table>
                 <TableHead>
                   <TableRow>

@@ -7,6 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const demoContent = [
   {id: '1', status: 'free', order: null},
@@ -17,34 +18,34 @@ const demoContent = [
   {id: '6', status: 'paid', order: 456},
 ];
 
-const renderActions = status => {
+const renderActions = (status, id) => {
   switch (status) {
     case 'free':
       return (
         <>
-          <Button>thinking</Button>
-          <Button>new order</Button>
+          <Button variant="outlined">thinking</Button>
+          <Button variant="outlined" component={Link} to={`waiter/order/new`}>new order</Button>
         </>
       );
     case 'thinking':
       return (
-        <Button>new order</Button>
+        <Button variant="outlined" component={Link} to={`waiter/order/new`}>new order</Button>
       );
     case 'ordered':
       return (
-        <Button>prepared</Button>
+        <Button variant="outlined" component={Link} to={`waiter/orders/${id}`}>prepared</Button>
       );
     case 'prepared':
       return (
-        <Button>delivered</Button>
+        <Button variant="outlined" component={Link} to={`waiter/orders/${id}`}>delivered</Button>
       );
     case 'delivered':
       return (
-        <Button>paid</Button>
+        <Button variant="outlined" component={Link} to={`waiter/orders/${id}`}>paid</Button>
       );
     case 'paid':
       return (
-        <Button>free</Button>
+        <Button variant="outlined">free</Button>
       );
     default:
       return null;
@@ -73,13 +74,13 @@ const Waiter = () => (
             </TableCell>
             <TableCell>
               {row.order && (
-                <Button to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
+                <Button to={`${process.env.PUBLIC_URL}/waiter/orders/${row.order}`}>
                   {row.order}
                 </Button>
               )}
             </TableCell>
             <TableCell>
-              {renderActions(row.status)}
+              {renderActions(row.status, row.id)}
             </TableCell>
           </TableRow>
         ))}
