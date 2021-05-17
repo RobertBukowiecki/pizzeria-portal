@@ -40,11 +40,14 @@ export const fetchFromAPI = () => {
 
 export const fetchStatusFromAPI = (tableID, status) => {
   return (dispatch) => {
-    Axios.put(`${api.url}/api/${api.tables}/${tableID}`, { status })
+    Axios.patch(`${api.url}/api/${api.tables}/${tableID}`, { status })
       .then(res => {
         dispatch(
           fetchTableStatus({ id: res.data.id, status: res.data.status })
         );
+      })
+      .catch((err) => {
+        dispatch(fetchError(err.message || true));
       });
   };
 };
