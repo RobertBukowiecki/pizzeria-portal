@@ -86,7 +86,7 @@ export default function reducer(statePart = [], action = {}) {
       return {
         ...statePart,
         data: statePart.data.map((item) =>
-          item.id === action.payload
+          item.id === action.payload.id
             ? {...item, status: action.payload.status}
             : item
         ),
